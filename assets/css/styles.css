@@ -1,10 +1,36 @@
+nav {
+  padding: 0;
+  background-color: lightcoral;
+  text-align: center;
+  width: 100%;
+}
+
+/* Colors */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins, san-serif";
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(239, 237, 236, 0.7);
+}
+
+/* Sub tags */
 header {
   background-color: lightblue;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+p {
+  font-size: 100%;
+  text-indent: 2.5%;
+  text-align: justify;
+  padding: 1rem;
 }
 /*# sourceMappingURL=styles.css.map */

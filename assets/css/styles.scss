@@ -1,7 +1,27 @@
-$primarybutton: rba(56,146,142);
+@import "./nav";
+@import "./variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins, san-serif";
+    user-select: none;
+    box-sizing: border-box;
+ }
+
+body {
+    background-color: $bodyBackground;
+}
+
+/* Sub tags */
 
 header {
     background-color: lightblue;
-    display: flex;
-     justify-content: center;
+}
+
+p {
+    font-size: 100%;
+    text-indent: 2.5%;
+    text-align: justify;
+    padding: 1rem;
 }
