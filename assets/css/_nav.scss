@@ -1,6 +1,47 @@
+header {
+    background-color:  lightblue; /* $headerBackground; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    color: lightcoral;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: $textSize;
+}
+
 nav {
     padding: 0;
-    background-color: lightcoral;
     text-align: center;
     width: 100%;
+    ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: lightcoral;
+        li {
+            background-color: lightgreen;
+            margin-bottom: 1em;
+            margin-left: 1em;
+        }
+        ol{
+            padding: 1em;
+            background-color: black;
+        }
+    }
+
+    a {
+        color: $navTextColor;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: $textSize;
+        &:hover{
+            color: $navTextColorActive;
+            border-radius: 10%;
+            box-shadow: 0 0 5px $navTextColor, 0 0 10px $navTextColor;
+        }
+    }
 }
