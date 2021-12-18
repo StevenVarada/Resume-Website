@@ -1,35 +1,39 @@
 header {
     background-color:  lightblue; /* $headerBackground; */
-    display: flex;
     justify-content: space-around;
     align-items: center;
+    display: flex;
 }
 
 .logo{
-    color: lightcoral;
-    text-decoration: none;
     text-transform: uppercase;
     font-size: $textSize;
+    a {
+        text-decoration: none;
+    }
 }
 
 nav {
-    padding: 0;
-    text-align: center;
-    width: 100%;
     ul {
-        display: flex;
-        margin: 0;
-        padding: 0;
-        list-style: none;
         background-color: lightcoral;
-        li {
-            background-color: lightgreen;
-            margin-bottom: 1em;
-            margin-left: 1em;
-        }
+        justify-content: space-around;
+        display: flex;
+        list-style: none;
+        width: 100%;
         ol{
-            padding: 1em;
+            list-style: none;
             background-color: black;
+        }
+    }
+    
+    li {
+        padding: .5em;
+        text-align: center;
+        background-color: lightgreen;
+        &:hover{
+            color: $navTextColorActive;
+            border-radius: 15%;
+            box-shadow: 0 0 5px $navTextColor, 0 0 5px $navTextColor;
         }
     }
 
@@ -38,10 +42,5 @@ nav {
         text-decoration: none;
         text-transform: uppercase;
         font-size: $textSize;
-        &:hover{
-            color: $navTextColorActive;
-            border-radius: 10%;
-            box-shadow: 0 0 5px $navTextColor, 0 0 10px $navTextColor;
-        }
     }
 }
