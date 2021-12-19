@@ -11,16 +11,21 @@
 
 body {
     background-color: $bodyBackground;
-    user-select: none;
 }
 
 /* Sub tags */
-
 p {
     font-size: 100%;
     text-indent: 2.5%;
     text-align: justify;
     padding: 1rem;
+}
+
+.card {
+    background-color: white;
+    padding: 1em;
+    margin: 2em;
+    box-shadow: 0 0 50px $navTextColor;
 }
 
 /*footer */

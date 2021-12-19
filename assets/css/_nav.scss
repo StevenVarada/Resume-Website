@@ -1,8 +1,11 @@
 header {
-    background-color:  lightblue; /* $headerBackground; */
+    background-color:  lightblue;
     justify-content: space-around;
     align-items: center;
     display: flex;
+    max-height: 15vh;
+    position: sticky;
+    top: 0vh;
 }
 
 .logo{
@@ -22,6 +25,7 @@ nav {
         width: 100%;
         ol{
             list-style: none;
+            display: none;
             background-color: black;
         }
     }
@@ -32,8 +36,9 @@ nav {
         background-color: lightgreen;
         &:hover{
             color: $navTextColorActive;
-            border-radius: 15%;
-            box-shadow: 0 0 5px $navTextColor, 0 0 5px $navTextColor;
+            border-radius: 10px;
+            box-shadow:
+                0 0 10px $navTextColor;
         }
     }
 
@@ -42,5 +47,12 @@ nav {
         text-decoration: none;
         text-transform: uppercase;
         font-size: $textSize;
+    }
+
+    /* This is what is making the current page get highlighted */
+    .currentpage {
+        a {
+            color: $currentPage;
+        }
     }
 }

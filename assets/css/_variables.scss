@@ -6,6 +6,13 @@ $bodyBackground: rgba(239,237,236,0.7);
 $headerBackground: rbga(215, 212, 208,0.7);
 $navTextColor: #85888b;
 $navTextColorActive: #FF2400;
+$currentPage: #C7423F;
 
 /*Text Size Header */
 $textSize: 1rem;
+
+/* Device Widths */
+$desktop: 1200px;
+$laptop: 1024px;
+$tablet: 768px;
+$phone: 480px;
