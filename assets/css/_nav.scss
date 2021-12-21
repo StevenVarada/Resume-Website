@@ -1,52 +1,150 @@
-header {
-    background-color:  lightblue;
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
-    min-height: 5vh;
-    position: sticky;
-    top: 0vh;
-}
-
-.logo{
-    text-transform: uppercase;
-    font-size: $head2;
-    a {
-        text-decoration: none;
-    }
-}
-
-nav {
-    ul {
-        background-color: lightcoralS;
-        justify-content: space-around;
+/* Navigation bar for Laptop and Desktop */
+@media all and (min-width: $laptop) {
+    header {
+        min-height: 5vh;
+        position: sticky;
+        align-items: center;
+        top: 0vh;
         display: flex;
-        list-style: none;
-        width: 100%;
-        ol{
-            list-style: none;
+        justify-content: space-between;
+        .logo{
+            text-transform: uppercase;
+            font-size: $head2;
+            padding-left: 2.5vw;
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .nav-toggle{
             display: none;
-            background-color: black;
+        }
+
+        nav {
+            ul {
+                width: 100%;
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                padding-right: 2.5vw;
+            }
+
+            li {
+                padding: .5em;
+                text-align: center;
+            }
+            
+            a {
+                color: $navTextColor;
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: $letter-spacing;
+                font-size: $head3;
+                padding: .5em;
+                &:hover, &:focus{
+                    color: $navTextColorActive;
+                    border-radius: 10px;
+                    box-shadow:
+                        0 0 10px $navTextColor;
+                }
+            }
         }
     }
-    
-    li {
-        padding: .5em;
-        text-align: center;
-        background-color: lightgreen;
-    }
-    
-    a {
-        color: $navTextColor;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: $head3;
-        padding: .5em;
-        &:hover{
-            color: $navTextColorActive;
-            border-radius: 10px;
-            box-shadow:
-                0 0 10px $navTextColor;
+}
+
+/* Naviagation Bar for Mobile and Tablet */
+@media only screen and (max-width: $laptop) {
+    header {
+        min-height: 5vh;        
+        align-items: center;
+        top: 0vh;
+        position: sticky;
+        display: flex;
+        width: 100%;
+        
+        .logo{
+            text-transform: uppercase;
+            font-size: $head3;
+            padding-left: 2.5vw;
+            a {
+                text-decoration: none;
+            }
+        }
+        
+        .nav-toggle{
+            display: none;
+            &:checked ~ nav {
+                transform: scale(1,1);
+
+                a{
+                    opacity: 1;
+                    transition: opacity 250ms ease-in-out 275ms;
+                }
+            }
+        }
+        
+        .nav-toggle-label {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: 5vw;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            span,
+            span::before, 
+            span::after {
+                background-color: $navTextColor;
+                display: block;
+                height: 2px;
+                width: 2em;
+                position: relative;
+            } 
+            span::before,
+            span::after{
+                content: "";
+                position: absolute;
+            }
+            span::before{
+                bottom: 7px;
+            }
+            span::after{
+                top: 7px;
+            }
+        }
+
+        nav {
+            position: absolute;
+            text-align: center;
+            top: 100%;
+            width: 100%;
+            background-color: $bodyBackground;
+            opacity: 1;
+            transform: scale(1,0);
+            transition: transform 400ms ease-in-out;
+            transform-origin: top;
+
+            ul {
+                list-style: none;
+                height: 80vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+            li {
+                text-align: center;
+            }
+            a {
+                color: $navTextColor;
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: $letter-spacing;
+                font-size: $head2;
+                padding: .5em;
+                opacity: 0;
+                transition: opacity 150ms ease-in-out;
+            }
         }
     }
 }
@@ -57,9 +155,4 @@ nav {
     a {
         color: $currentPage;
     }
-}
-
-
-@media only screen and (max-width: $phone) {
-    
 }
