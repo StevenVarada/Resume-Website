@@ -3,14 +3,14 @@ header {
     justify-content: space-around;
     align-items: center;
     display: flex;
-    max-height: 15vh;
+    min-height: 5vh;
     position: sticky;
     top: 0vh;
 }
 
 .logo{
     text-transform: uppercase;
-    font-size: $textSize;
+    font-size: $head2;
     a {
         text-decoration: none;
     }
@@ -18,7 +18,7 @@ header {
 
 nav {
     ul {
-        background-color: lightcoral;
+        background-color: lightcoralS;
         justify-content: space-around;
         display: flex;
         list-style: none;
@@ -34,6 +34,14 @@ nav {
         padding: .5em;
         text-align: center;
         background-color: lightgreen;
+    }
+    
+    a {
+        color: $navTextColor;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: $head3;
+        padding: .5em;
         &:hover{
             color: $navTextColorActive;
             border-radius: 10px;
@@ -41,18 +49,17 @@ nav {
                 0 0 10px $navTextColor;
         }
     }
+}
 
+
+/* Highlight the current page */
+.currentpage {
     a {
-        color: $navTextColor;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: $textSize;
+        color: $currentPage;
     }
+}
 
-    /* This is what is making the current page get highlighted */
-    .currentpage {
-        a {
-            color: $currentPage;
-        }
-    }
+
+@media only screen and (max-width: $phone) {
+    
 }
