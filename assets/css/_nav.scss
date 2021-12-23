@@ -1,7 +1,7 @@
 /* Navigation bar for Laptop and Desktop */
 @media all and (min-width: $laptop) {
     header {
-        min-height: 5vh;
+        min-height: $navHeight;
         position: sticky;
         align-items: center;
         top: 0vh;
@@ -55,96 +55,96 @@
 /* Naviagation Bar for Mobile and Tablet */
 @media only screen and (max-width: $laptop) {
     header {
-        min-height: 5vh;        
-        align-items: center;
-        top: 0vh;
+        min-height: $navHeight;
         position: sticky;
-        display: flex;
+        align-items: center;
+        top: 0;
         width: 100%;
-        
-        .logo{
-            text-transform: uppercase;
-            font-size: $head3;
-            padding-left: 2.5vw;
-            a {
-                text-decoration: none;
-            }
-        }
-        
-        .nav-toggle{
-            display: none;
-            &:checked ~ nav {
-                transform: scale(1,1);
+        display: flex;
+        justify-content: space-between;
+    }
 
-                a{
-                    opacity: 1;
-                    transition: opacity 250ms ease-in-out 275ms;
-                }
+    .logo{
+        padding-left: 2.5vw;
+        text-transform: uppercase;
+        font-size: $head3;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .nav-toggle{
+        display: none;
+        &:checked ~ nav {
+            transform: scale(1,1);
+
+            a{
+                opacity: 1;
+                transition: opacity 250ms ease-in-out 275ms;
             }
         }
-        
-        .nav-toggle-label {
+    }
+
+    .nav-toggle-label {
+        position: absolute;
+        right: 0;
+        margin-right: 5vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        span,
+        span::before, 
+        span::after {
+            background-color: $navTextColor;
+            position: relative;
+            height: 2px;
+            width: 2em;
+            display: block;
+        } 
+        span::before,
+        span::after{
+            content: "";
             position: absolute;
-            top: 0;
-            right: 0;
-            margin-right: 5vw;
-            height: 100%;
-            display: flex;
-            align-items: center;
-
-            span,
-            span::before, 
-            span::after {
-                background-color: $navTextColor;
-                display: block;
-                height: 2px;
-                width: 2em;
-                position: relative;
-            } 
-            span::before,
-            span::after{
-                content: "";
-                position: absolute;
-            }
-            span::before{
-                bottom: 7px;
-            }
-            span::after{
-                top: 7px;
-            }
         }
+        span::before{
+            bottom: 7px;
+        }
+        span::after{
+            top: 7px;
+        }
+    }
 
-        nav {
-            position: absolute;
-            text-align: center;
-            top: 100%;
+    nav {
+        opacity: 1;
+        position: absolute;
+        top: $navHeight;
+        width: 100%;
+        transform: scale(1,0);
+        transition: transform 400ms ease-in-out;
+        transform-origin: top;
+        
+        ul {
+            list-style: none;
+            height: $mobileNavHeight;
             width: 100%;
-            background-color: $bodyBackground;
-            opacity: 1;
-            transform: scale(1,0);
-            transition: transform 400ms ease-in-out;
-            transform-origin: top;
-
-            ul {
-                list-style: none;
-                height: 80vh;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-            }
-            li {
-                text-align: center;
-            }
-            a {
-                color: $navTextColor;
-                text-decoration: none;
-                text-transform: uppercase;
-                letter-spacing: $letter-spacing;
-                font-size: $head2;
-                padding: .5em;
-                opacity: 0;
-                transition: opacity 150ms ease-in-out;
-            }
+            justify-content: space-around;
+            flex-direction: column;
+            display: flex;
+        }
+        li {
+            text-align: center;
+            flex-grow: 1;
+        }
+        a{
+            opacity: 0;
+            height: 100%;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: $letter-spacing;
+            display: block;
+            font-size: $head2;
+            transition: opacity 150ms ease-in-out;
         }
     }
 }
