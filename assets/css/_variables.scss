@@ -1,29 +1,44 @@
+/*
+  Author: Steven Varada Salazr
+  Project: Resume Website
+  File: variables.scss
+  Date: Dec.23-2021
+  Description: This files holds all of the variables for all of the css files
+*/
+
 /* Colors */
 $primarybutton: rba(56,146,142);
-$bodyBackground: rgba(239,237,236,0.7);
-
-/* Header colors */
-$headerBackground: rbga(215, 212, 208,0.7);
-$navTextColor: #85888b;
-$navTextColorActive: #FF2400;
+$bodyBackground:rgb(255,255,255);
+/* Nav colors */
+$headerColor: rgba(0,0,0,0.05);
+$navBackgroundColor: #303030;
+$navTextColor: #1DA1F2;
+$navTextColorActive: #002E4C;
 $currentPage: #C7423F;
+$hamburgerBarColor: #1DA1F2;
+/* Bottom Nav */
+$bottomNavBackgroundColor: #1DA1F2;
 
-/* Text Modifications*/
+/* Distances */
 $pIndent: 2.5%;
 $letter-spacing: .5px;
+/* This is since the header container has a height of zero
+and to have the tranparent expect of the nav */
+$desktopPaddingTop: 8vh;
+$mobilePaddingTop: 6vh;
 
-/* Text Size */
+$mobileNavHeight: 100vh;
+
+/* Text */
+$headingColor: #fff;
+$subHeadingColor: #FFEACE;
 $bodyText: 1rem;
 $head1: 4.5rem;
 $head2: 2.25rem;
 $head3: 1.25rem;
 
-/* Device Widths */
+/* Media Queries */
 $desktop: 1200px;
 $laptop: 1024px;
 $tablet: 768px;
 $phone: 480px;
-
-/* Distances */
-$navHeight: 5vh;
-$mobileNavHeight: 80vh;

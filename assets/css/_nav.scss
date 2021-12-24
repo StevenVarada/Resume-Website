@@ -1,18 +1,31 @@
+/*
+  Author: Steven Varada Salazr
+  Project: Resume Website
+  File: nav.scss
+  Date: Dec.23-2021
+  Description: This has all of the styling for the mobile and desktop nav
+               Both nav types are in media separte queries
+*/
+
 /* Navigation bar for Laptop and Desktop */
 @media all and (min-width: $laptop) {
     header {
-        min-height: $navHeight;
+        max-height: 0px;
         position: sticky;
         align-items: center;
         top: 0vh;
         display: flex;
         justify-content: space-between;
         .logo{
+            padding-top: $desktopPaddingTop;
+            position: relative;
             text-transform: uppercase;
             font-size: $head2;
             padding-left: 2.5vw;
             a {
+                color: $navTextColor;
                 text-decoration: none;
+                font-weight: 700;
             }
         }
 
@@ -21,6 +34,7 @@
         }
 
         nav {
+            padding-top: $desktopPaddingTop;
             ul {
                 width: 100%;
                 list-style: none;
@@ -45,7 +59,7 @@
                     color: $navTextColorActive;
                     border-radius: 10px;
                     box-shadow:
-                        0 0 10px $navTextColor;
+                        0 0 10px $navTextColorActive;
                 }
             }
         }
@@ -55,7 +69,8 @@
 /* Naviagation Bar for Mobile and Tablet */
 @media only screen and (max-width: $laptop) {
     header {
-        min-height: $navHeight;
+        max-height: 0px;
+        background-color: $headerColor;
         position: sticky;
         align-items: center;
         top: 0;
@@ -65,12 +80,16 @@
     }
 
     .logo{
+        padding-top: $mobilePaddingTop;
         padding-left: 2.5vw;
         text-transform: uppercase;
         font-size: $head3;
 
         a {
+            color: $navTextColor;
+            font-size: 1.5rem;
             text-decoration: none;
+            font-weight: 700;
         }
     }
 
@@ -87,6 +106,7 @@
     }
 
     .nav-toggle-label {
+        padding-top: $mobilePaddingTop;
         position: absolute;
         right: 0;
         margin-right: 5vw;
@@ -96,15 +116,16 @@
         span,
         span::before, 
         span::after {
-            background-color: $navTextColor;
+            background-color: $hamburgerBarColor;
             position: relative;
             height: 2px;
-            width: 2em;
+            width: 1.5em;
             display: block;
         } 
         span::before,
         span::after{
             content: "";
+            background-color: $hamburgerBarColor;
             position: absolute;
         }
         span::before{
@@ -116,9 +137,10 @@
     }
 
     nav {
+        background-color: $navBackgroundColor;
         opacity: 1;
         position: absolute;
-        top: $navHeight;
+        top: 0;
         width: 100%;
         transform: scale(1,0);
         transition: transform 400ms ease-in-out;
@@ -128,17 +150,17 @@
             list-style: none;
             height: $mobileNavHeight;
             width: 100%;
-            justify-content: space-around;
             flex-direction: column;
             display: flex;
+            justify-content: center;
+            align-items: center;
         }
         li {
             text-align: center;
-            flex-grow: 1;
+            width: 100%;
         }
         a{
             opacity: 0;
-            height: 100%;
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: $letter-spacing;
@@ -147,8 +169,41 @@
             transition: opacity 150ms ease-in-out;
         }
     }
-}
 
+    .bottomNav{
+        background-color: $bottomNavBackgroundColor;
+        display: flex;
+        top: 0px;
+        justify-content: space-around;
+        align-items: flex-end;
+        height: 10vh;
+
+        div {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        img {
+            align-items: center;
+            height: 50%;
+            width: 50%;
+        }
+
+        h3 {
+            color: $headingColor;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: $letter-spacing;
+            margin-top: 1vh;
+            margin-bottom: 1vh;
+        }
+    }
+}
 
 /* Highlight the current page */
 .currentpage {

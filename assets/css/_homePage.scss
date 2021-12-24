@@ -1,0 +1,84 @@
+/*
+  Author: Steven Varada Salazr
+  Project: Resume Website
+  File: homepage.scss
+  Date: Dec.23-2021
+  Description: This has all of the styling for the mobile and desktop homepage
+               Both nav types are in media separte queries
+*/
+
+/* Navigation bar for Laptop and Desktop */
+@media all and (min-width: $laptop) {
+    .aboutMeMobile {
+        display: none;
+    }
+
+    .aboutMeDesktop {
+        background-color: $bodyBackground;
+        padding-top: 5vh;
+    }
+}
+
+/* Naviagation Bar for Mobile and Tablet */
+@media only screen and (max-width: $laptop) {
+    .aboutMeDesktop {
+        display: none;
+    }
+
+    .aboutMeMobile {
+        background: 
+            linear-gradient(rgba(0,0,0,0.6),
+                            rgba(0,0,0,0.3))
+                            ,url(../media/mobileBackground.jpg);
+        background-size: cover;
+        top: 5vh;
+        height: 90vh;
+        width: 100vw;
+        color: $headingColor;
+
+        .titleText {
+            padding: 5vh 10vw 0 10vw;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        h3 {
+            color: $subHeadingColor;
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+    }
+
+    .portfolioSection {
+        height: 50vh;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+
+        .heading {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            h2 {
+                font-size: 1.75rem;
+                font-weight: 500;
+            }
+            a {
+                padding-top: 1vh;
+                font-size: 1.65rem;
+                font-weight: 400;
+                color: $navTextColor;
+                text-decoration: none;
+            }
+        }
+    }
+
+}

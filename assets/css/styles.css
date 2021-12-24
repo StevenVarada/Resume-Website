@@ -1,14 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;800&display=swap");
+/*
+  Author: Steven Varada Salazr
+  Project: Resume Website
+  File: variables.scss
+  Date: Dec.23-2021
+  Description: This files holds all of the variables for all of the css files
+*/
 /* Colors */
-/* Header colors */
-/* Text Modifications*/
-/* Text Size */
-/* Device Widths */
+/* Nav colors */
+/* Bottom Nav */
 /* Distances */
+/* This is since the header container has a height of zero
+and to have the tranparent expect of the nav */
+/* Text */
+/* Media Queries */
+/*
+  Author: Steven Varada Salazr
+  Project: Resume Website
+  File: nav.scss
+  Date: Dec.23-2021
+  Description: This has all of the styling for the mobile and desktop nav
+               Both nav types are in media separte queries
+*/
 /* Navigation bar for Laptop and Desktop */
 @media all and (min-width: 1024px) {
   header {
-    min-height: 5vh;
+    max-height: 0px;
     position: -webkit-sticky;
     position: sticky;
     -webkit-box-align: center;
@@ -23,15 +40,22 @@
             justify-content: space-between;
   }
   header .logo {
+    padding-top: 8vh;
+    position: relative;
     text-transform: uppercase;
     font-size: 2.25rem;
     padding-left: 2.5vw;
   }
   header .logo a {
+    color: #1DA1F2;
     text-decoration: none;
+    font-weight: 700;
   }
   header .nav-toggle {
     display: none;
+  }
+  header nav {
+    padding-top: 8vh;
   }
   header nav ul {
     width: 100%;
@@ -49,7 +73,7 @@
     text-align: center;
   }
   header nav a {
-    color: #85888b;
+    color: #1DA1F2;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -57,17 +81,18 @@
     padding: .5em;
   }
   header nav a:hover, header nav a:focus {
-    color: #FF2400;
+    color: #002E4C;
     border-radius: 10px;
-    -webkit-box-shadow: 0 0 10px #85888b;
-            box-shadow: 0 0 10px #85888b;
+    -webkit-box-shadow: 0 0 10px #002E4C;
+            box-shadow: 0 0 10px #002E4C;
   }
 }
 
 /* Naviagation Bar for Mobile and Tablet */
 @media only screen and (max-width: 1024px) {
   header {
-    min-height: 5vh;
+    max-height: 0px;
+    background-color: rgba(0, 0, 0, 0.05);
     position: -webkit-sticky;
     position: sticky;
     -webkit-box-align: center;
@@ -83,12 +108,16 @@
             justify-content: space-between;
   }
   .logo {
+    padding-top: 6vh;
     padding-left: 2.5vw;
     text-transform: uppercase;
     font-size: 1.25rem;
   }
   .logo a {
+    color: #1DA1F2;
+    font-size: 1.5rem;
     text-decoration: none;
+    font-weight: 700;
   }
   .nav-toggle {
     display: none;
@@ -103,6 +132,7 @@
     transition: opacity 250ms ease-in-out 275ms;
   }
   .nav-toggle-label {
+    padding-top: 6vh;
     position: absolute;
     right: 0;
     margin-right: 5vw;
@@ -117,15 +147,16 @@
   .nav-toggle-label span,
   .nav-toggle-label span::before,
   .nav-toggle-label span::after {
-    background-color: #85888b;
+    background-color: #1DA1F2;
     position: relative;
     height: 2px;
-    width: 2em;
+    width: 1.5em;
     display: block;
   }
   .nav-toggle-label span::before,
   .nav-toggle-label span::after {
     content: "";
+    background-color: #1DA1F2;
     position: absolute;
   }
   .nav-toggle-label span::before {
@@ -135,9 +166,10 @@
     top: 7px;
   }
   nav {
+    background-color: #303030;
     opacity: 1;
     position: absolute;
-    top: 5vh;
+    top: 0;
     width: 100%;
     -webkit-transform: scale(1, 0);
             transform: scale(1, 0);
@@ -150,10 +182,8 @@
   }
   nav ul {
     list-style: none;
-    height: 80vh;
+    height: 100vh;
     width: 100%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -161,16 +191,19 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   nav li {
     text-align: center;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    width: 100%;
   }
   nav a {
     opacity: 0;
-    height: 100%;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -179,6 +212,54 @@
     -webkit-transition: opacity 150ms ease-in-out;
     transition: opacity 150ms ease-in-out;
   }
+  .bottomNav {
+    background-color: #1DA1F2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 0px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: 10vh;
+  }
+  .bottomNav div {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  .bottomNav img {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 50%;
+    width: 50%;
+  }
+  .bottomNav h3 {
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
 }
 
 /* Highlight the current page */
@@ -186,16 +267,107 @@
   color: #C7423F;
 }
 
+/*
+  Author: Steven Varada Salazr
+  Project: Resume Website
+  File: homepage.scss
+  Date: Dec.23-2021
+  Description: This has all of the styling for the mobile and desktop homepage
+               Both nav types are in media separte queries
+*/
+/* Navigation bar for Laptop and Desktop */
+@media all and (min-width: 1024px) {
+  .aboutMeMobile {
+    display: none;
+  }
+  .aboutMeDesktop {
+    background-color: white;
+    padding-top: 5vh;
+  }
+}
+
+/* Naviagation Bar for Mobile and Tablet */
+@media only screen and (max-width: 1024px) {
+  .aboutMeDesktop {
+    display: none;
+  }
+  .aboutMeMobile {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.3))), url(../media/mobileBackground.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url(../media/mobileBackground.jpg);
+    background-size: cover;
+    top: 5vh;
+    height: 90vh;
+    width: 100vw;
+    color: #fff;
+  }
+  .aboutMeMobile .titleText {
+    padding: 5vh 10vw 0 10vw;
+  }
+  .aboutMeMobile h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  .aboutMeMobile h3 {
+    color: #FFEACE;
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+  .portfolioSection {
+    height: 50vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .portfolioSection .heading {
+    width: 100%;
+    height: 10vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .portfolioSection .heading h2 {
+    font-size: 1.75rem;
+    font-weight: 500;
+  }
+  .portfolioSection .heading a {
+    padding-top: 1vh;
+    font-size: 1.65rem;
+    font-weight: 400;
+    color: #1DA1F2;
+    text-decoration: none;
+  }
+}
+
+/*
+  Author: Steven Varada Salazr
+  Project: Resume Website
+  File: styles.scss
+  Date: Dec.23-2021
+  Description: This is the general styling for all of the css files in this project
+*/
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', san-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-body {
-  background-color: rgba(239, 237, 236, 0.7);
+  background-color: transparent;
 }
 
 /* Sub tags */
@@ -204,14 +376,6 @@ p {
   text-indent: 2.5%;
   text-align: justify;
   padding: 1rem;
-}
-
-.card {
-  background-color: white;
-  padding: 1em;
-  margin: 2em;
-  -webkit-box-shadow: 0 0 50px #85888b;
-          box-shadow: 0 0 50px #85888b;
 }
 
 /*footer */
