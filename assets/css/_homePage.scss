@@ -7,7 +7,7 @@
                Both nav types are in media separte queries
 */
 
-/* Navigation bar for Laptop and Desktop */
+/* Laptop and Desktop Navigation */
 @media all and (min-width: $laptop) {
     .aboutMeMobile {
         display: none;
@@ -19,7 +19,7 @@
     }
 }
 
-/* Naviagation Bar for Mobile and Tablet */
+/* Mobile and Tablet Naviagation */
 @media only screen and (max-width: $laptop) {
     .aboutMeDesktop {
         display: none;
@@ -37,7 +37,7 @@
         color: $headingColor;
 
         .titleText {
-            padding: 5vh 10vw 0 10vw;
+            padding: 7vh 10vw 0vh 10vw;
         }
 
         h1 {
@@ -50,30 +50,19 @@
             font-size: 1.25rem;
             font-weight: 300;
         }
-    }
-
-    .portfolioSection {
-        height: 50vh;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        align-items: center;
-
+        
         .heading {
+            padding-top: 5vh;
             width: 100%;
-            height: 10vh;
             display: flex;
             justify-content: space-around;
             align-items: center;
-
             h2 {
-                font-size: 1.75rem;
+                font-size: 1.5rem;
                 font-weight: 500;
             }
             a {
-                padding-top: 1vh;
-                font-size: 1.65rem;
+                font-size: 1.5rem;
                 font-weight: 400;
                 color: $navTextColor;
                 text-decoration: none;
@@ -81,4 +70,19 @@
         }
     }
 
+    .portfolioSection {
+        height: 43vh;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        div {
+            width: 50vw;
+            height: 85%;
+            margin: 3vw;
+            background-color: white;
+            border-radius: 10px;
+        }
+    }
 }

@@ -40,14 +40,14 @@ and to have the tranparent expect of the nav */
             justify-content: space-between;
   }
   header .logo {
-    padding-top: 8vh;
+    padding-top: 15vh;
     position: relative;
     text-transform: uppercase;
     font-size: 2.25rem;
     padding-left: 2.5vw;
   }
   header .logo a {
-    color: #1DA1F2;
+    color: #FFFFFF;
     text-decoration: none;
     font-weight: 700;
   }
@@ -55,7 +55,7 @@ and to have the tranparent expect of the nav */
     display: none;
   }
   header nav {
-    padding-top: 8vh;
+    padding-top: 15vh;
   }
   header nav ul {
     width: 100%;
@@ -73,7 +73,7 @@ and to have the tranparent expect of the nav */
     text-align: center;
   }
   header nav a {
-    color: #1DA1F2;
+    color: #FFFFFF;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -114,7 +114,7 @@ and to have the tranparent expect of the nav */
     font-size: 1.25rem;
   }
   .logo a {
-    color: #1DA1F2;
+    color: #FFFFFF;
     font-size: 1.5rem;
     text-decoration: none;
     font-weight: 700;
@@ -147,7 +147,7 @@ and to have the tranparent expect of the nav */
   .nav-toggle-label span,
   .nav-toggle-label span::before,
   .nav-toggle-label span::after {
-    background-color: #1DA1F2;
+    background-color: #FFFFFF;
     position: relative;
     height: 2px;
     width: 1.5em;
@@ -156,7 +156,7 @@ and to have the tranparent expect of the nav */
   .nav-toggle-label span::before,
   .nav-toggle-label span::after {
     content: "";
-    background-color: #1DA1F2;
+    background-color: #FFFFFF;
     position: absolute;
   }
   .nav-toggle-label span::before {
@@ -213,7 +213,7 @@ and to have the tranparent expect of the nav */
     transition: opacity 150ms ease-in-out;
   }
   .bottomNav {
-    background-color: #1DA1F2;
+    background-color: #001BFF;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -275,7 +275,7 @@ and to have the tranparent expect of the nav */
   Description: This has all of the styling for the mobile and desktop homepage
                Both nav types are in media separte queries
 */
-/* Navigation bar for Laptop and Desktop */
+/* Laptop and Desktop Navigation */
 @media all and (min-width: 1024px) {
   .aboutMeMobile {
     display: none;
@@ -286,7 +286,7 @@ and to have the tranparent expect of the nav */
   }
 }
 
-/* Naviagation Bar for Mobile and Tablet */
+/* Mobile and Tablet Naviagation */
 @media only screen and (max-width: 1024px) {
   .aboutMeDesktop {
     display: none;
@@ -301,7 +301,7 @@ and to have the tranparent expect of the nav */
     color: #fff;
   }
   .aboutMeMobile .titleText {
-    padding: 5vh 10vw 0 10vw;
+    padding: 7vh 10vw 0vh 10vw;
   }
   .aboutMeMobile h1 {
     font-size: 3rem;
@@ -312,26 +312,9 @@ and to have the tranparent expect of the nav */
     font-size: 1.25rem;
     font-weight: 300;
   }
-  .portfolioSection {
-    height: 50vh;
+  .aboutMeMobile .heading {
+    padding-top: 5vh;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .portfolioSection .heading {
-    width: 100%;
-    height: 10vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -341,16 +324,34 @@ and to have the tranparent expect of the nav */
         -ms-flex-align: center;
             align-items: center;
   }
-  .portfolioSection .heading h2 {
-    font-size: 1.75rem;
+  .aboutMeMobile .heading h2 {
+    font-size: 1.5rem;
     font-weight: 500;
   }
-  .portfolioSection .heading a {
-    padding-top: 1vh;
-    font-size: 1.65rem;
+  .aboutMeMobile .heading a {
+    font-size: 1.5rem;
     font-weight: 400;
-    color: #1DA1F2;
+    color: #FFFFFF;
     text-decoration: none;
+  }
+  .portfolioSection {
+    height: 43vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .portfolioSection div {
+    width: 50vw;
+    height: 85%;
+    margin: 3vw;
+    background-color: white;
+    border-radius: 10px;
   }
 }
 

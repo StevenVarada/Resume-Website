@@ -7,24 +7,24 @@
 */
 
 /* Colors */
-$primarybutton: rba(56,146,142);
+$primarybutton: rgb(56,146,142);
 $bodyBackground:rgb(255,255,255);
 /* Nav colors */
 $headerColor: rgba(0,0,0,0.05);
 $navBackgroundColor: #303030;
-$navTextColor: #1DA1F2;
+$navTextColor: #FFFFFF;
 $navTextColorActive: #002E4C;
 $currentPage: #C7423F;
-$hamburgerBarColor: #1DA1F2;
+$hamburgerBarColor: #FFFFFF;
 /* Bottom Nav */
-$bottomNavBackgroundColor: #1DA1F2;
+$bottomNavBackgroundColor: #001BFF;
 
 /* Distances */
 $pIndent: 2.5%;
 $letter-spacing: .5px;
 /* This is since the header container has a height of zero
 and to have the tranparent expect of the nav */
-$desktopPaddingTop: 8vh;
+$desktopPaddingTop: 15vh;
 $mobilePaddingTop: 6vh;
 
 $mobileNavHeight: 100vh;
