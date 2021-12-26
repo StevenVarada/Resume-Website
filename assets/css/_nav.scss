@@ -136,6 +136,7 @@
     }
 
     nav {
+        z-index: 99;
         background-color: $navBackgroundColor;
         opacity: 1;
         position: absolute;

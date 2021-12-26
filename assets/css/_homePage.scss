@@ -123,12 +123,10 @@
         }
         
         .cardButton {
-            /*
-            top: 180px;
-            left: 25px;
+            position: relative;
+            top: 70%;
             width: 100px;
             height: 30px;
-            */
             border: none;
             color: $headingColor;
             background-color: $buttonColor;
@@ -145,7 +143,6 @@
             }
         }
         .cardText p{
-            position: relative;
             font-weight: 700;
             text-align: center;
             letter-spacing: $letter-spacing;

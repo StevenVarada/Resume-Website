@@ -164,6 +164,7 @@ and to have the tranparent expect of the nav */
     top: 7px;
   }
   nav {
+    z-index: 99;
     background-color: #303030;
     opacity: 1;
     position: absolute;
@@ -394,12 +395,10 @@ and to have the tranparent expect of the nav */
     }
   }
   .card .cardButton {
-    /*
-            top: 180px;
-            left: 25px;
-            width: 100px;
-            height: 30px;
-            */
+    position: relative;
+    top: 70%;
+    width: 100px;
+    height: 30px;
     border: none;
     color: #fff;
     background-color: #8B8B8B;
@@ -417,7 +416,6 @@ and to have the tranparent expect of the nav */
     color: #303030;
   }
   .card .cardText p {
-    position: relative;
     font-weight: 700;
     text-align: center;
     letter-spacing: 0.5px;
