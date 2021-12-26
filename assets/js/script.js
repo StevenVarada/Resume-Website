@@ -1,15 +1,12 @@
-// JavaScript Document
-$(document).ready(function() {
+$(document).ready(function() {			
     $("#content-slider").lightSlider({
-        item: 2,
-        autoWidth: false,
-        loop:true,
-        slideMargin: 10,
-        slideMove: 1,
-        auto:true,
-        speed: 1000,
-        pauseOnHover: true,
-        pause: 5000,
-        keyPress:true
+    loop:true,
+    item: 1,
+    autoWidth: true,
+    auto: true,
+    speed: 1000,
+    pauseOnHover: true,
+    pause: 5000,
+    keyPress:true
     });
 });
