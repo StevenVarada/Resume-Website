@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 /*
   Author: Steven Varada Salazr
   Project: Resume Website
@@ -9,6 +9,7 @@
 /* Colors */
 /* Nav colors */
 /* Bottom Nav */
+/* Slider dot color */
 /* Distances */
 /* This is since the header container has a height of zero
 and to have the tranparent expect of the nav */
@@ -48,7 +49,6 @@ and to have the tranparent expect of the nav */
   }
   header .logo a {
     color: #FFFFFF;
-    text-decoration: none;
     font-weight: 700;
   }
   header .nav-toggle {
@@ -74,7 +74,6 @@ and to have the tranparent expect of the nav */
   }
   header nav a {
     color: #FFFFFF;
-    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-size: 1.25rem;
@@ -108,6 +107,7 @@ and to have the tranparent expect of the nav */
             justify-content: space-between;
   }
   .logo {
+    z-index: 999;
     padding-top: 6vh;
     padding-left: 2.5vw;
     text-transform: uppercase;
@@ -116,7 +116,6 @@ and to have the tranparent expect of the nav */
   .logo a {
     color: #FFFFFF;
     font-size: 1.5rem;
-    text-decoration: none;
     font-weight: 700;
   }
   .nav-toggle {
@@ -132,6 +131,7 @@ and to have the tranparent expect of the nav */
     transition: opacity 250ms ease-in-out 275ms;
   }
   .nav-toggle-label {
+    z-index: 999;
     padding-top: 6vh;
     position: absolute;
     right: 0;
@@ -204,7 +204,6 @@ and to have the tranparent expect of the nav */
   }
   nav a {
     opacity: 0;
-    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     display: block;
@@ -280,6 +279,9 @@ and to have the tranparent expect of the nav */
   .aboutMeMobile {
     display: none;
   }
+  .bottomNav {
+    display: none;
+  }
   .aboutMeDesktop {
     background-color: white;
     padding-top: 5vh;
@@ -332,28 +334,23 @@ and to have the tranparent expect of the nav */
     font-size: 1.5rem;
     font-weight: 400;
     color: #FFFFFF;
-    text-decoration: none;
   }
-  .portfolioSection {
+  .portfolioSilder {
     height: 43vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  .portfolioSection div {
-    width: 50vw;
-    height: 85%;
-    margin: 3vw;
-    background-color: white;
-    border-radius: 10px;
-  }
 }
+
+
 
 /*
   Author: Steven Varada Salazr
@@ -377,6 +374,10 @@ p {
   text-indent: 2.5%;
   text-align: justify;
   padding: 1rem;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*footer */

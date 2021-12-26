@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 @import "./variables";
 @import "./nav";
 @import "./homePage";
@@ -19,14 +19,20 @@
     background-color: transparent;
  }
 
-
-
 /* Sub tags */
 p {
     font-size: 100%;
     text-indent: $pIndent;
     text-align: justify;
     padding: 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none outside none;
 }
 
 /*footer */

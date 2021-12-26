@@ -9,6 +9,7 @@
 /* Colors */
 $primarybutton: rgb(56,146,142);
 $bodyBackground:rgb(255,255,255);
+$buttonColor: #8B8B8B;
 /* Nav colors */
 $headerColor: rgba(0,0,0,0.05);
 $navBackgroundColor: #303030;
@@ -16,8 +17,6 @@ $navTextColor: #FFFFFF;
 $navTextColorActive: #002E4C;
 $currentPage: #C7423F;
 $hamburgerBarColor: #FFFFFF;
-/* Bottom Nav */
-$bottomNavBackgroundColor: #001BFF;
 
 /* Distances */
 $pIndent: 2.5%;
@@ -26,7 +25,6 @@ $letter-spacing: .5px;
 and to have the tranparent expect of the nav */
 $desktopPaddingTop: 15vh;
 $mobilePaddingTop: 6vh;
-
 $mobileNavHeight: 100vh;
 
 /* Text */
