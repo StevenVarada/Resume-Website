@@ -7,33 +7,35 @@
 */
 
 /* Colors */
-$primarybutton: rgb(56,146,142);
-$bodyBackground:rgb(255,255,255);
-$buttonColor: #8B8B8B;
+$bodyBackgroundColor:rgb(255,255,255);
+$footerbackgroundColor: #C6C6C6;
+$buttonColor: #919191;
+
 /* Nav colors */
 $headerColor: rgba(0,0,0,0.05);
-$navBackgroundColor: #303030;
-$navTextColor: #FFFFFF;
-$navTextColorActive: #002E4C;
-$currentPage: #C7423F;
-$hamburgerBarColor: #FFFFFF;
-$bottomNavBackgroundColor: #001BFF;
+$navTextColor: black;
+$navTextColorActive: #8B8B8B;
+$menuTextColor: #8B8B8B;
+$menuTextColorActive: #FFF;
+$menuBackgroundColor: #002E4C;
+$hamburgerBarColor: rgb(20, 20, 20);
+
+$currentPage: #919191;
 
 /* Distances */
 $pIndent: 2.5%;
 $letter-spacing: .5px;
-/* This is since the header container has a height of zero
-and to have the tranparent expect of the nav */
-$desktopPaddingTop: 15vh;
-$mobilePaddingTop: 6vh;
-$mobileNavHeight: 100vh;
+
+$hamburgerBarWidth: 1.5rem;
+$headerTopPadding: 2vh;
+$headerHeight: 5vh;
 
 /* Text */
 $headingColor: #fff;
 $subHeadingColor: #FFEACE;
 $bodyText: 1rem;
-$head1: 4.5rem;
-$head2: 2.25rem;
+$head1: 3.75rem;
+$head2: 2.50rem;
 $head3: 1.25rem;
 
 /* Media Queries */

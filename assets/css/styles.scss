@@ -11,30 +11,34 @@
   Description: This is the general styling for all of the css files in this project
 */
 
-* {
+*  {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-    background-color: transparent;
- }
-
-/* Sub tags */
-p {
-    font-size: 100%;
-    text-indent: $pIndent;
-    text-align: justify;
-    padding: 1rem;
+    box-sizing: border-box; // Gets rid of border
+    font-family: 'Poppins', sans-serif;;
 }
 
-a{
+body {
+    background-color: $bodyBackgroundColor;
+    overflow-x: hidden;
+}
+
+/* Sub Tags */
+p {
+    text-align: justify;
+    font-size: 100%;
+    text-indent: $pIndent;
+}
+
+a {
     text-decoration: none;
 }
 
-/*footer */
-
-footer {
-    background-color: grey;
+ul {
+    list-style: none;
 }
 
-
+/* Footer */
+footer {
+    background-color: $footerbackgroundColor;
+}

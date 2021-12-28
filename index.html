@@ -31,192 +31,160 @@
 <body>
 
   <header>
+    
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    
     <div class="logo">
       <a href="/" alt="Fix Logo Img">Steven Varada</a>
     </div>
-
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-
+    
     <label for="nav-toggle" class="nav-toggle-label">
+      <div class="menu">
+        <p>Menu</p>
+      </div>  
       <span></span>
     </label>
+
     <nav>
       <ul>
+        <lh>Menu</lh>
         <li><a href="#">Home</a></li>
         <li><a href="#">Portfolio</a></li>
         <li><a href="#">Contact Me</a></li>
       </ul>
     </nav>
+
   </header>
 
-  <!-- Desktop About Me -->
-  <div class="aboutMeDesktop">
-    <h1>
-      About Me
-    </h1>
-    <h1>
-      Steven Varada
-    </h1>
-    <h2>
-      I am a <span>Software Engineer, Computer Enginer, Web developer</span>
-    </h2>
-    <p>
-      A engineer who thrives learning in a fast pace environment
-      a with a serious passion for software and new technologies
-    </p>
-  </div>
+  <main>
+    <section class="aboutMe">
+      <div class="aboutMeContainer">
+        <h1>
+          About Me
+        </h1>
+        <h1>
+          Steven Varada
+        </h1>
+        <h2>
+          I am a <span>Software Engineer, Computer Enginer, Web developer</span>
+        </h2>
+        <p>
+          A engineer who thrives learning in a fast pace environment
+          a with a serious passion for software and new technologies
+        </p>
+      </div>
+    </section>
 
-<!-- Mobile About Me -->
-  <div class="aboutMeMobile">
-    <div class="titleText">
-      <h1>I live to learn & innovate</h1>
-      <h3><span>Software Engineer</span> from NY,NY</h3>
+    <section>
+      <!--
+        Water Marks 
+          <h3>Computer Engineering</h3>
+          <h3>Software Engineering</h3>
+          <h3>Web Development</h3>
+      -->
+      <div class="skillSection">
+        <div class="skillsHeader">
+          <h1>Skills</h1>
+        </div>
+    </section>
 
-      <div class="heading">
-        <h2>My Work</h2>
-        <a href="#">-View All Work</a>
+    <section>
+      <div class="skillCard">
+        <div class="columnsContainer">
+
+          <div class="columns">
+            <img src="/assets/media/computerEngineering.svg" alt="Fix Icon">
+            <h3>Hardware</h3>
+            <ol>
+              <li>Cyclone V FPGA</li>
+              <li>Arduino Microcontroller</li>
+              <li>STM32F411 Microcontroller</li>
+              <li>Signal Generator</li>
+              <li>Oscilloscope</li>
+            </ol>
+            <button class="button">
+              Resume
+            </button>
+          </div>
+
+          <div class="columns">
+            <img src="/assets/media/language-5.svg" alt="Fix Icon">
+            <h3>Langauges</h3>
+            <ol>
+              <li>C++</li>
+              <li>C#</li>
+              <li>VHDL</li>
+              <li>Assembly</li>
+
+              <li>Java</li>
+              <li>Python</li>
+
+              <li>HTML5</li>
+              <li>FreeMarker</li>
+              <li>CSS</li>
+              <li>SASS</li>
+              <li>JavaScript</li>
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>ASP.Net</li>
+            </ol>
+            <button class="button">
+              Resume
+            </button>
+          </div>
+
+          <div class="columns">
+              <img src="/assets/media/software.png" alt="Fix Icon">
+              <h3>Software</h3>
+              <ol>
+                <li>CLion</li>
+                <li>Eclipse</li>
+                <li>ModelSim</li>
+                <li>MATLAB</li>
+                <li>Intel’s Quartus</li>
+                <li>Intel’s System Integration Tool (Platform Designer)</li>
+                <li>Intel NIOS II Core</li>
+                <li>FreeRTOC</li>
+                <li>NI-Multisim</li>
+
+                <li>IntelliJ</li>
+                <li>Maven</li>
+                <li>BootStrap</li>
+                <li>Gradle</li>
+                <li>GIT</li>
+                <li>Spring MVC</li>
+                <li>Spark Java</li>
+                <li>ASP.Net</li>
+
+                <li>Visual Studio Code</li>
+                <li>Liferay DXP - Enterprise software</li>
+              </ol>
+
+              <button class="button">
+                Resume
+              </button>
+          </div>
+
+        </div>
       </div>
     </div>
+    </section>
 
-    <div class="portfolioSilderContainer">
+    <section>
+      <div class="experience">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+    </section>
 
-        <ul id="content-slider" class="content-slider">
-
-          <li>
-            <div class="card">
-              <div class="overlay"></div>
-              <button class="cardButton">View Project</button>
-              <div class="cardText">
-                <p> *Project Name A </p>
-              </div>
-            </div>
-          </li>
-  
-          <li>
-            <div class="card">
-              <div class="overlay"></div>
-              <button class="cardButton">View Project</button>
-              <div class="cardText">
-                <p> *Project Name B</p>
-              </div>
-            </div>
-          </li>
-  
-          <li>
-            <div class="card">
-              <div class="overlay"></div>
-              <button class="cardButton">View Project A</button>
-              <div class="cardText">
-                <p> *Project Name C</p>
-              </div>
-            </div>
-          </li>
-
-        </ul>
-
-    </div>
-
-  </div>
-
-  <div class="bottomNav">
-    <div class="portfolio">
-      <img src="./assets/media/" alt="Fix Icon">
-      <h3>Portfolio</h3>
-    </div>
-    <div class="skills">
-      <img src="./assets/media/" alt="Fix Icon">
-      <h3>skills</h3>
-    </div>
-    <div class="contact">
-      <img src="./assets/media/" alt="Fix Icon">
-      <h3>Contact</h3>
-    </div>
-  </div>
-
-  <div class="skillSection">
-    <div>
-      <h3>Computer Engineering</h3>
-      <h3>Software Engineering</h3>
-      <h3>Web Development</h3>
-
-      <img src="" alt="">
-      <h3>Hardware</h3>
-      <ol>
-        <li>Cyclone V FPGA</li>
-        <li>Arduino Microcontroller</li>
-        <li>STM32F411 Microcontroller</li>
-        <li>Signal Generator</li>
-        <li>Oscilloscope</li>
-      </ol>
-      <button class="button">
-      </button>
-
-
-      <img src="" alt="">
-      <h3>Langauges</h3>
-      <ol>
-        <li>C++</li>
-        <li>C#</li>
-        <li>VHDL</li>
-        <li>Assembly</li>
-
-        <li>Java</li>
-        <li>Python</li>
-
-        <li>HTML5</li>
-        <li>FreeMarker</li>
-        <li>CSS</li>
-        <li>SASS</li>
-        <li>JavaScript</li>
-        <li>PHP</li>
-        <li>MySQL</li>
-        <li>ASP.Net</li>
-      </ol>
-      <button class="button">
-      </button>
-
-
-      <img src="" alt="">
-      <h3>Software</h3>
-      <ol>
-        <li>CLion</li>
-        <li>Eclipse</li>
-        <li>ModelSim</li>
-        <li>MATLAB</li>
-        <li>Intel’s Quartus</li>
-        <li>Intel’s System Integration Tool (Platform Designer)</li>
-        <li>Intel NIOS II Core</li>
-        <li>FreeRTOC</li>
-        <li>NI-Multisim</li>
-
-        <li>IntelliJ</li>
-        <li>Maven</li>
-        <li>BootStrap</li>
-        <li>Gradle</li>
-        <li>GIT</li>
-        <li>Spring MVC</li>
-        <li>Spark Java</li>
-        <li>ASP.Net</li>
-
-        <li>Visual Studio Code</li>
-        <li>Liferay DXP - Enterprise software</li>
-      </ol>
-
-      <button class="button">
-      </button>
-    </div>
-  </div>
-
-  <div class="experience">
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-  </div>
-
-  <div class="contactCard">
-    <h2>Ready to Contact Your Star</h2>
-    <h3>Conact Me</h3>
-  </div>
+    <section>
+      <div class="contactCard">
+        <h2>Ready to Contact Your Star</h2>
+        <h3>Conact Me</h3>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <div class="footerCoulms">
