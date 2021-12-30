@@ -3,8 +3,17 @@
   Project: Resume Website
   File: index.html
   Date: Oct.31-2021
-  Description: Homepage to the resume website and holds information about
-               summary, personal summary, and career goals
+  Description: The homepage hold all of these scetion listed and has most of the
+          resume qalities on it expect for all of the projects and contact page
+            Sections:
+              1. Header - Introduction
+              2. Nav bar 
+              3. About Me - Grid System
+              4. Recent Projects - Card Slider
+              5. Skils - Flex Box
+              6. Experience - Grid
+              7. Contact Card - Grid
+              8. Footer - Grid
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -29,191 +38,172 @@
 </head>
 
 <body>
+  <header class="intro">
+    <h1 class="titleName">Steven Varada</h1>
+    <div class="subheading">
+      <h4 class="typing"></h4>
+      <h5>Who Thrives in fast pace learning and innovating environments</h5>
+    </div>
+    <div class="links">
+      <a href="/portfolio.html">-View Portfolio</a>
+      <a href="/cotactMe.html">-Contact Me</a>
+    </div>
+  </header>
 
-  <header>
-    
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    
+  <nav>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
     <div class="logo">
       <a href="/" alt="Fix Logo Img">Steven Varada</a>
     </div>
-    
-    <label for="nav-toggle" class="nav-toggle-label">
+    <label for="menu-toggle" class="menu-toggle-label">
       <div class="menu">
         <p>Menu</p>
       </div>  
       <span></span>
     </label>
-
-    <nav>
+    <menu>
       <ul>
         <lh>Menu</lh>
         <li><a href="#">Home</a></li>
         <li><a href="#">Portfolio</a></li>
         <li><a href="#">Contact Me</a></li>
       </ul>
-    </nav>
-
-  </header>
+    </menu>
+  </nav>
 
   <main>
+
     <section class="aboutMe">
-      <div class="aboutMeContainer">
-        <h1>
-          About Me
-        </h1>
-        <h1>
-          Steven Varada
-        </h1>
-        <h2>
-          I am a <span>Software Engineer, Computer Enginer, Web developer</span>
-        </h2>
-        <p>
-          A engineer who thrives learning in a fast pace environment
-          a with a serious passion for software and new technologies
+        <h2> About Me </h2>
+        <p> I'm a comptuer engineer major with a minor in Chinese at RIT. 
+          I will be graduatin this psring 2022 and will be looking for a full-time
+          position as a embedded software engineer or juroir software engineer. 
         </p>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <!--
-        Water Marks 
-          <h3>Computer Engineering</h3>
-          <h3>Software Engineering</h3>
-          <h3>Web Development</h3>
-      -->
-      <div class="skillSection">
-        <div class="skillsHeader">
-          <h1>Skills</h1>
-        </div>
-    </section>
+    <section class="skills">
+      <h3>Computer Engineering</h3>
+      <h3>Software Engineering</h3>
+      <h3>Web Development</h3>
+      <h1>Skills</h1>
 
-    <section>
       <div class="skillCard">
-        <div class="columnsContainer">
-
-          <div class="columns">
-            <img src="/assets/media/computerEngineering.svg" alt="Fix Icon">
-            <h3>Hardware</h3>
-            <ol>
-              <li>Cyclone V FPGA</li>
-              <li>Arduino Microcontroller</li>
-              <li>STM32F411 Microcontroller</li>
-              <li>Signal Generator</li>
-              <li>Oscilloscope</li>
-            </ol>
-            <button class="button">
-              Resume
-            </button>
-          </div>
-
-          <div class="columns">
-            <img src="/assets/media/language-5.svg" alt="Fix Icon">
-            <h3>Langauges</h3>
-            <ol>
-              <li>C++</li>
-              <li>C#</li>
-              <li>VHDL</li>
-              <li>Assembly</li>
-
-              <li>Java</li>
-              <li>Python</li>
-
-              <li>HTML5</li>
-              <li>FreeMarker</li>
-              <li>CSS</li>
-              <li>SASS</li>
-              <li>JavaScript</li>
-              <li>PHP</li>
-              <li>MySQL</li>
-              <li>ASP.Net</li>
-            </ol>
-            <button class="button">
-              Resume
-            </button>
-          </div>
-
-          <div class="columns">
-              <img src="/assets/media/software.png" alt="Fix Icon">
-              <h3>Software</h3>
-              <ol>
-                <li>CLion</li>
-                <li>Eclipse</li>
-                <li>ModelSim</li>
-                <li>MATLAB</li>
-                <li>Intel’s Quartus</li>
-                <li>Intel’s System Integration Tool (Platform Designer)</li>
-                <li>Intel NIOS II Core</li>
-                <li>FreeRTOC</li>
-                <li>NI-Multisim</li>
-
-                <li>IntelliJ</li>
-                <li>Maven</li>
-                <li>BootStrap</li>
-                <li>Gradle</li>
-                <li>GIT</li>
-                <li>Spring MVC</li>
-                <li>Spark Java</li>
-                <li>ASP.Net</li>
-
-                <li>Visual Studio Code</li>
-                <li>Liferay DXP - Enterprise software</li>
-              </ol>
-
-              <button class="button">
-                Resume
-              </button>
-          </div>
-
+        <div class="columns">
+          <img src="/assets/media/computerEngineering.svg" alt="Fix Icon">
+          <h3>Hardware</h3>
+          <ol>
+            <li>Cyclone V FPGA</li>
+            <li>Arduino Microcontroller</li>
+            <li>STM32F411 Microcontroller</li>
+            <li>Signal Generator</li>
+            <li>Oscilloscope</li>
+          </ol>
+          <button>Resume</button>
         </div>
+
+        <div class="columns">
+          <img src="/assets/media/language-5.svg" alt="Fix Icon">
+          <h3>Langauges</h3>
+          <ol>
+            <li>C++</li>
+            <li>C#</li>
+            <li>VHDL</li>
+            <li>Assembly</li>
+
+            <li>Java</li>
+            <li>Python</li>
+
+            <li>HTML5</li>
+            <li>FreeMarker</li>
+            <li>CSS</li>
+            <li>SASS</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>MySQL</li>
+            <li>ASP.Net</li>
+          </ol>
+          <button>Resume</button>
+        </div>
+
+        <div class="columns">
+            <img src="/assets/media/software.png" alt="Fix Icon">
+            <h3>Software</h3>
+            <ol>
+              <li>CLion</li>
+              <li>Eclipse</li>
+              <li>ModelSim</li>
+              <li>MATLAB</li>
+              <li>Intel’s Quartus</li>
+              <li>Intel’s System Integration Tool (Platform Designer)</li>
+              <li>Intel NIOS II Core</li>
+              <li>FreeRTOC</li>
+              <li>NI-Multisim</li>
+
+              <li>IntelliJ</li>
+              <li>Maven</li>
+              <li>BootStrap</li>
+              <li>Gradle</li>
+              <li>GIT</li>
+              <li>Spring MVC</li>
+              <li>Spark Java</li>
+              <li>ASP.Net</li>
+
+              <li>Visual Studio Code</li>
+              <li>Liferay DXP - Enterprise software</li>
+            </ol>
+            <button>Resume</button>
+
+
       </div>
-    </div>
     </section>
 
-    <section>
-      <div class="experience">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-      </div>
+    <section class="experience">
+        <p>I'm proud to have interacted with these awesome companies</p>
+        <img src="" alt="Fix Icon">
+        <h3></h3>
+        <button>-Learn More</button>
+        <img src="" alt="Fix Icon">
+        <h3></h3>
+        <button>-Learn More</button>
+        <img src="" alt="Fix Icon">
+        <h3></h3>
+        <button>-Learn More</button>
     </section>
 
-    <section>
-      <div class="contactCard">
-        <h2>Ready to Contact Your Star</h2>
-        <h3>Conact Me</h3>
-      </div>
+    <section class="contactCard">
+      <h2>Ready to Contact Your Star</h2>
+      <h3>Conact Me</h3>
     </section>
   </main>
 
   <footer>
-    <div class="footerCoulms">
+    <!-- This reaplaces the mail button -->
+    <div class="backToTop">
       <a href="#" id="goingTop">
-        THIS WILL NEED YOU FIXING THE LOGO<img src="" alt="">
+        <img src="" alt="">
         <p>Back to Top</p>
       </a>
     </div>
 
-    <div class="footerCoulms">
+    <div class="socials">
       <h1>Social Media</h1>
       <!-- The target blank creates a new tab when you clicking the links -->
       <a href="https://www.linkedin.com/in/steven-varada" target="_blank">Linkedin</a>
       <a href="https://github.com/StevenVarada?tab=repositories" target="_blank">GitHub</a>
       <a href="https://meritpages.com/StevenVarada" target="_blank">RIT Merit Page</a>
+      <!-- If client does have default email client then it won't do anything -->
+      <a href = "mailto:StevenVarada@gmail.com">Email</a>
     </div>
 
-    <div class="footerCoulms">
+    <div class="resumes">
       <h1>Resume</h1>
       <!-- Add Download files -->
-      <a href="" target="_blank">Copmuter Engineering</a>
-      <a href="" target="_blank">Software Engineering</a>
-      <a href="" target="_blank">Web Development</a>
+      <a href="/assets/files/Steven_Varada_SE_Resume.pdf" download="Steven_Varada_Resume">Copmuter Engineering</a>
+      <a href="" download="Steven_Varada_Resume">Software Engineering</a>
+      <a href="" download="Steven_Varada_Resume">Web Development</a>
     </div>
 
-    <div class="footerCoulms">
-      <button class="contactButton">
-
-      </button>
+    <div class="tradeMark">
       <p>
         Designed and Developed by Steven Varada &#8480;
       </p>

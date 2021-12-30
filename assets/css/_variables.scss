@@ -1,45 +1,84 @@
 /*
   Author: Steven Varada Salazr
   Project: Resume Website
-  File: variables.scss
+  File: _variables.scss
   Date: Dec.23-2021
-  Description: This files holds all of the variables for all of the css files
+  Description: Variables for all of the files in the project
+      CSS afttribute ordering:
+        1. Display
+        2. Positioning
+        3. Box-model
+        4. Typography
+        5. Manipulation
+        6. Miscellaneous
 */
 
 /* Colors */
-$bodyBackgroundColor:rgb(255,255,255);
-$footerbackgroundColor: #C6C6C6;
-$buttonColor: #919191;
+$dominantColor: white;
+$secondaryColor: black;
+/*Ascent Colors */
+$ascentBlue: #002E4C;
+$ascentLightBrown: #FFEACE;
+$ascentBrown: #523E1F;
 
-/* Nav colors */
-$headerColor: rgba(0,0,0,0.05);
-$navTextColor: black;
-$navTextColorActive: #8B8B8B;
+/* grey shades */
+$introBackground: #5E5E5E;
+
+$bodyBackgroundColor:$dominantColor;
+$footerbackgroundColor: #C6C6C6;
+$textColor: $secondaryColor;
+$fontFamilyPrimiary: 'Poppins', sans-serif;
+$fontFamilySecondary: 'Poppins', sans-serif;
+
+$navColor: rgba(0,0,0,0.05);
+$headingColor: $dominantColor;
+$subHeadingColor: $ascentLightBrown;
+
+$menuTextColor: $secondaryColor;
+$menuTextColorActive: #8B8B8B;
+$currentPage: #919191;
+
 $menuTextColor: #8B8B8B;
 $menuTextColorActive: #FFF;
-$menuBackgroundColor: #002E4C;
+$menuBackgroundColor: $ascentBlue;
 $hamburgerBarColor: rgb(20, 20, 20);
 
-$currentPage: #919191;
+$buttonColor: #919191;
 
 /* Distances */
 $pIndent: 2.5%;
 $letter-spacing: .5px;
-
 $hamburgerBarWidth: 1.5rem;
-$headerTopPadding: 2vh;
-$headerHeight: 5vh;
+$navTopPadding: 2vh;
+$navHeight: 5vh;
+
+$bodyZIndex: 0;
+$navZIndex: 5;
+$menuZIndex: 4;
 
 /* Text */
-$headingColor: #fff;
-$subHeadingColor: #FFEACE;
 $bodyText: 1rem;
-$head1: 3.75rem;
-$head2: 2.50rem;
-$head3: 1.25rem;
+$head1: 4.5rem;
+$head2: 3.75rem;
+$head3: 2.5rem;
+$head4: 1.75rem;
+$head5: 1.25rem;
+$head6: 1rem;
+$lineHeight: 1.6;
+$headerLineHeight: 1.1;
+
+/* Animation Speeds */
+
+/* Don't forgot to fix the speed in type function of JS */
+$typingSpeed: 200ms;
 
 /* Media Queries */
 $desktop: 1200px;
 $laptop: 1024px;
 $tablet: 768px;
 $phone: 480px;
+
+/* Miscellaneous */
+$boxShadow: 0.25em 0.25em 0.75em rgba( $secondaryColor,0.25),
+            0.125em 0.125em 0.25em rgba( $secondaryColor,0.15);
+$dropShadow: -10px 5px 0px rgba(black,0.1);

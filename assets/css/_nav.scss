@@ -1,7 +1,7 @@
 /*
   Author: Steven Varada Salazr
   Project: Resume Website
-  File: nav.scss
+  File: _nav.scss
   Date: Dec.23-2021
   Description: Desktop and mobile friendly navigation bar, use checkbox checked
         psuedo class, checked, to make the menu appaer and change the other elements 
@@ -10,34 +10,33 @@
 
 /* Naviagation Bar */
 
-header {
-    position: sticky;
-    top: $headerTopPadding;
-    max-height: $headerHeight;
-    padding: 0 5vw 0 5vw;
-    width: 100%;
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: $navTopPadding;
+    max-height: $navHeight;
+    padding: 0 5vw 0 5vw;
+    width: 100%;
     .logo {
-        z-index: 999;
-        filter: drop-shadow(-10px 5px 0px rgba(black,0.1));
+        z-index: $navZIndex;
+        filter: drop-shadow($dropShadow);
         a {
-            color: $navTextColor;
-            text-transform: uppercase;
-            font-size: $head3;
+            color: $menuTextColor;
+            font-size: $head4;
             font-weight: 700;
             transition: all 800ms ease-in-out;
         }
     }
 
     /* This is the toggle for the menu ~ checkbox*/
-    .nav-toggle {
+    .menu-toggle {
         display: none;
         &:checked ~ .logo a{
                 color: $menuTextColorActive;
         }
-        &:checked ~ nav {
+        &:checked ~ menu {
             transform: scale(1,1);
             a {
                 opacity: 1;
@@ -45,14 +44,14 @@ header {
             }
         }
         /* Hamburger Animation */
-        &:checked ~ .nav-toggle-label{
+        &:checked ~ .menu-toggle-label{
             .menu p {
                 color: $menuTextColorActive;
                 transform: translateX($hamburgerBarWidth/2);
             }
             span{
-                transform: translateX($hamburgerBarWidth);
                 background: transparent;
+                transform: translateX($hamburgerBarWidth);
             }
             span::before {
                 background-color: $menuTextColorActive;
@@ -70,30 +69,28 @@ header {
     }
 
     /* This is the hamburger Icon */
-    .nav-toggle-label {
-        height: 100%;
-        z-index: 999;
+    .menu-toggle-label {
         display: flex;
         align-items: center;
+        height: 100%;
+        z-index: $navZIndex;
         .menu {
             position: relative;
             right: $hamburgerBarWidth/2;
-            z-index: 999;
             p {
-                transition: all 800ms ease-in-out;
-                color: black;
                 text-transform: uppercase;
                 font-weight: 600;
+                transition: all 800ms ease-in-out;
             }
         }
         span,
         span::before,
         span::after {
+            display: block;
             background-color: $hamburgerBarColor;
             height: 3px;
-            border-radius: 25px;
             width: $hamburgerBarWidth;
-            display: block;
+            border-radius: 25px;
             transition: all 800ms ease-in-out;
         }
         span::before,
@@ -108,28 +105,27 @@ header {
             transform: translateY(8px);
         }
     }
-      /* This is the menu with a nav container */
-    nav {
+    menu {
         background: $menuBackgroundColor;
         position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
+        z-index: $menuZIndex;
         transform: scale(1,0);
         transform-origin: top;
         transition: transform 700ms ease-in-out;
-        /* Menu */
         ul  {
-            width: 100%;
-            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            width: 100%;
+            height: 100%;
             lh {
-                position: relative;
                 color: $menuTextColorActive;
+                position: relative;
                 font-size: $bodyText;
                 text-transform: uppercase;
             }
@@ -138,13 +134,14 @@ header {
             width: 100%;
         }
         a {
+            display: block;
             color: $menuTextColor;
             opacity: 0;
-            text-transform: uppercase;
-            font-size: $head1;
-            font-weight: 500;
+            position: relative;
             text-align: center;
-            display: block;
+            text-transform: uppercase;
+            font-size: $head2;
+            font-weight: 500;
             &:hover {
                 color: $menuTextColorActive;
             }
@@ -152,15 +149,12 @@ header {
     }
 
     @media all and (min-width: $laptop)   {
-        header {
-            top: 0;
-        }
         .logo {
             a {
-                font-size: $head2;
+                font-size: $head3;
             }
         }
-        nav{
+        menu{
             a {
                 font-size: $head1;
             }
