@@ -41,11 +41,13 @@ $currentPage: #919191;
 $menuTextColor: #8B8B8B;
 $menuTextColorActive: #FFF;
 $menuBackgroundColor: $ascentBlue;
-$hamburgerBarColor: rgb(20, 20, 20);
+$hamburgerBarColor: $secondaryColor;
 
 $buttonColor: #919191;
 
 /* Distances */
+$widthIntroDesktop: 40%;
+$widthSubheading: 85%;
 $pIndent: 2.5%;
 $letter-spacing: .5px;
 $hamburgerBarWidth: 1.5rem;
@@ -67,8 +69,9 @@ $head6: 1rem;
 $lineHeight: 1.6;
 $headerLineHeight: 1.1;
 
-/* Animation Speeds */
+/* Miscellaneous */
 
+/* Animation Speeds */
 /* Don't forgot to fix the speed in type function of JS */
 $typingSpeed: 200ms;
 
@@ -78,7 +81,10 @@ $laptop: 1024px;
 $tablet: 768px;
 $phone: 480px;
 
-/* Miscellaneous */
+/* Shadows */
 $boxShadow: 0.25em 0.25em 0.75em rgba( $secondaryColor,0.25),
             0.125em 0.125em 0.25em rgba( $secondaryColor,0.15);
-$dropShadow: -10px 5px 0px rgba(black,0.1);
+$dropShadow: -10px 5px 0px rgba($secondaryColor,0.1);
+
+/* Transforms */
+$scale : 1.1;

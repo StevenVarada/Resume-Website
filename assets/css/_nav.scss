@@ -23,7 +23,7 @@ nav {
         z-index: $navZIndex;
         filter: drop-shadow($dropShadow);
         a {
-            color: $menuTextColor;
+            color: $secondaryColor;
             font-size: $head4;
             font-weight: 700;
             transition: all 800ms ease-in-out;
