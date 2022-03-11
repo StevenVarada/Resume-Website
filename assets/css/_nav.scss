@@ -24,6 +24,7 @@ nav {
         filter: drop-shadow($dropShadow);
         a {
             color: $secondaryColor;
+            font-family: Valencia;
             font-size: $head4;
             font-weight: 700;
             transition: all 800ms ease-in-out;

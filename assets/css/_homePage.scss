@@ -128,32 +128,79 @@ header {
 }
 
 .aboutMe {
-    margin: 5rem;
-    padding: 2rem;
-    height: 60vh;
+    margin: 2rem;
     display: grid;
-    grid: auto-flow / repeat (3,1fr); //minmax(1em,1fr);
-    // grid-template-areas: 
-    //     " waterMark space space1"
-    //     " waterMark    card    card "
-    //     " space2       card    card ";
+    // grid is shorthand
+    grid: .25fr 1fr .25fr / repeat(12,1fr); // row / column
     justify-items: center;
     align-items: center;
-    h2 {
-        // grid-row: waterMark / space2-start;
-        // grid-column: waterMark / space-end;
-        color: rgba( $secondaryColor, 1);
-        filter: drop-shadow($dropShadow);
-        z-index: -1;
+
+    .background-content {
+        h1 {
+            font-size: 7.5rem;
+            color: rgba( $secondaryColor, .08);
+            filter: drop-shadow($dropShadow);
+        }
+        grid-column: 1 / 12;
+        grid-row: 2;
     }
-    p {
-        background: rgba($color: $ascentBrown, $alpha: .50);
+    .grid-content {
         width: 100%;
         height: 100%;
-        padding: 3rem;
-        font-size: .75rem;
+        display: grid;
+        place-items: center;
+        grid-column: 2 / 12;
+        grid-row: 2;
         border: 2px $secondaryColor;
-        // grid-row: card;
-        // grid-column: card;
+    }
+}
+
+.skills{
+    padding: 1.5rem 0 1.5rem 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8;
+    .skills-header{
+        display: grid;
+        place-items: center;
+    }
+    .skillCard {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        text-align: center;
+        .img {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            height: 50px;
+        }
+        .columns{
+            border-right: 1px solid #E6ECF8;
+            display: grid;
+            grid-template-rows: 100px 75px 1fr 50px;
+            ol {
+                list-style: none;
+            }
+        }
+        .columns:last-child{
+            border-right: none;
+        }
+    }
+}
+
+.experience {
+    padding: 1rem;
+    .experience-Header{
+        display: flex;
+        justify-content: center;
+    }
+    .companies{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        .company{
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }

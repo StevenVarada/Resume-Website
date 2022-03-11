@@ -23,7 +23,7 @@
     padding: 0;
     z-index: $bodyZIndex;
     box-sizing: border-box;
-    font-family: $fontFamilyPrimiary;
+    font-family: HelveticaNowDisplay;
     font-size: $bodyText;
     line-height: $lineHeight;
 }
@@ -32,6 +32,11 @@ body {
     background-color: $bodyBackgroundColor;
     color: $textColor;
     overflow-x: hidden;
+}
+
+main {
+    margin: 1rem;
+    padding: 2rem;
 }
 
 /* Sub Tags */
@@ -75,4 +80,13 @@ img {
 /* Footer */
 footer {
     background-color: $footerbackgroundColor;
+}
+// 4daa7e5c
+@font-face{
+    font-family: Valencia;
+    src: url("./assets/font/Valencia.ttf") format("ttf");
+}
+@font-face {
+    font-family: HelveticaNowDisplay;
+    src: url("./assets/font/HelveticaNowDisplay.otf") format("oft");
 }

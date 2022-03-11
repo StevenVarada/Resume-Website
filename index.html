@@ -73,36 +73,28 @@
 
   <main>
     <section class="aboutMe">
-        <h2> About Me </h2>
+      <div class="background-content">
+        <h1> About Me </h1>
+      </div>
+      <div class="grid-content">
         <p> I'm a comptuer engineer major with a minor in Chinese at RIT. 
-          I will be graduatin this psring 2022 and will be looking for a full-time
-          position as a embedded software engineer or juroir software engineer. 
+        I will be graduatin this psring 2022 and will be looking for a full-time
+        position as a embedded software engineer or juroir software engineer. 
         </p>
-      </section>
+      </div>
+    </section>
 
     <section class="skills">
-      <h3>Computer Engineering</h3>
-      <h3>Software Engineering</h3>
-      <h3>Web Development</h3>
-      <h1>Skills</h1>
-
+      <div class="skills-header">
+        <h1>Skills</h1>
+      </div>
+  
       <div class="skillCard">
         <div class="columns">
-          <img src="/assets/media/computerEngineering.svg" alt="Fix Icon">
-          <h3>Hardware</h3>
-          <ol>
-            <li>Cyclone V FPGA</li>
-            <li>Arduino Microcontroller</li>
-            <li>STM32F411 Microcontroller</li>
-            <li>Signal Generator</li>
-            <li>Oscilloscope</li>
-          </ol>
-          <button>Resume</button>
-        </div>
-
-        <div class="columns">
-          <img src="/assets/media/language-5.svg" alt="Fix Icon">
-          <h3>Langauges</h3>
+          <div class="img">
+            <img src="/assets/media/language-5.svg" alt="Fix Icon">
+          </div>
+            <h3>Langauges</h3>
           <ol>
             <li>C++</li>
             <li>C#</li>
@@ -121,52 +113,79 @@
             <li>MySQL</li>
             <li>ASP.Net</li>
           </ol>
-          <button>Resume</button>
+        </div>
+        
+        <div class="columns">
+          <div class="img">
+            <img src="/assets/media/software.png" alt="Fix Icon">
+          </div>
+          <h3>Software</h3>
+          <ol>
+            <li>CLion</li>
+            <li>Eclipse</li>
+            <li>ModelSim</li>
+            <li>MATLAB</li>
+            <li>Intel’s Quartus</li>
+            <li>Intel’s System Integration Tool</li>
+            <li>Intel NIOS II Core</li>
+            <li>FreeRTOC</li>
+            <li>NI-Multisim</li>
+
+            <li>IntelliJ</li>
+            <li>Maven</li>
+            <li>BootStrap</li>
+            <li>Gradle</li>
+            <li>GIT</li>
+            <li>Spring MVC</li>
+            <li>Spark Java</li>
+            <li>ASP.Net</li>
+
+            <li>Visual Studio Code</li>
+            <li>Liferay DXP - Enterprise software</li>
+          </ol>
         </div>
 
         <div class="columns">
-            <img src="/assets/media/software.png" alt="Fix Icon">
-            <h3>Software</h3>
-            <ol>
-              <li>CLion</li>
-              <li>Eclipse</li>
-              <li>ModelSim</li>
-              <li>MATLAB</li>
-              <li>Intel’s Quartus</li>
-              <li>Intel’s System Integration Tool (Platform Designer)</li>
-              <li>Intel NIOS II Core</li>
-              <li>FreeRTOC</li>
-              <li>NI-Multisim</li>
-
-              <li>IntelliJ</li>
-              <li>Maven</li>
-              <li>BootStrap</li>
-              <li>Gradle</li>
-              <li>GIT</li>
-              <li>Spring MVC</li>
-              <li>Spark Java</li>
-              <li>ASP.Net</li>
-
-              <li>Visual Studio Code</li>
-              <li>Liferay DXP - Enterprise software</li>
-            </ol>
-            <button>Resume</button>
-
-
+          <divc class="img">
+            <img src="/assets/media/computerEngineering.svg" alt="Fix Icon">
+          </divc>
+          <h3>Hardware</h3>
+          <ol>
+            <li>Cyclone V FPGA</li>
+            <li>Arduino Microcontroller</li>
+            <li>STM32F411 Microcontroller</li>
+            <li>Signal Generator</li>
+            <li>Oscilloscope</li>
+          </ol>
+        </div>
       </div>
     </section>
 
     <section class="experience">
-        <p>I'm proud to have interacted with these awesome companies</p>
-        <img src="" alt="Fix Icon">
-        <h3></h3>
-        <button>-Learn More</button>
-        <img src="" alt="Fix Icon">
-        <h3></h3>
-        <button>-Learn More</button>
-        <img src="" alt="Fix Icon">
-        <h3></h3>
-        <button>-Learn More</button>
+        <div class="experience-Header">
+          <h5>I'm proud to have interacted with these awesome companies</h5>
+        </div>        
+
+        <div class="companies">
+          <!-- Company learn more will be a slide down -->
+          <div class="company">
+            <h5>Internship</h5>
+            <img src="" alt="Fix Icon">
+            <button>-Learn More</button>
+          </div>
+
+          <div class="company">
+            <h5>Externship</h5>
+            <img src="" alt="Fix Icon">
+            <button>-Learn More</button>
+          </div>
+
+          <div class="company">
+            <h5>Employment</h5>
+            <img src="" alt="Fix Icon">
+            <button>-Learn More</button>
+          </div>
+        </div>
     </section>
 
     <section class="contactCard">
